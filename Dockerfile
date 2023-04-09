@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="saitkocatas@gmail.com"
+LABEL maintainer="chinyongtan.cy@gmail.com"
 
 RUN \
   apk update && \
@@ -8,5 +8,8 @@ RUN \
   curl
 
 COPY entrypoint.sh /tmp/entrypoint.sh
+
+RUN chmod 0744 /tmp/entrypoint.sh
+RUN chmod +x /tmp/entrypoint.sh
 
 ENTRYPOINT ["/tmp/entrypoint.sh"]
