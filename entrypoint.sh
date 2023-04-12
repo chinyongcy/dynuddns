@@ -5,7 +5,7 @@ DYN_HOSTNAME=${DYN_HOSTNAME:-""}
 DYN_USER=${DYN_USER:-""}
 DYN_PASS=${DYN_PASS:-""}
 WAIT_TIME=${WAIT_TIME:-"10"}
-GET_IP_SERVER=${GET_IP_SERVER:-"http://ipecho.net/plain"}
+GET_IP_SERVER=${GET_IP_SERVER:-"https://api.ipify.org"}
 
 while true; do
   EXT_IP=${EXT_IP:-$(curl -s $GET_IP_SERVER)}
